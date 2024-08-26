@@ -3,37 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-    <title>Encriptador</title>
+    <title>Decodificador e Codificador</title>
+    <link rel="stylesheet" href="style.css">   
+    <link rel="shortcut icon" href="Imagens/Logoalura.png" type="image/x-icon">
 </head>
 <body>
-
-    <header>
-        <img class="logoAlura" src="/Imagens/Logoalura.png" alt="Logo da alura">
-    </header>
-
-    <main>
-        <section>
-            <textarea class="text-area" cols="41" rows="4" placeholder="Digite seu texto"></textarea> 
-        </section>
-        
-        <div class="Informacao">
-            <h6>Apenas letras minúsculas e sem acento.</h6>
+    <main class="main container">
+        <header class="cabecalho">
+            <img src="imagens/Logoalura.png" alt="logo alura">
+            <h1>Mensagens Codificadas</h1>
+        </header>
+        <div class="container-input">
+            <div class="input">
+                <textarea id="input-texto" placeholder="Digite o seu texto aqui..."></textarea>
+                <p>ATENÇÃO: Apenas letras minúsculas e sem acento</p>
+            </div>
+            <div id="output">
+                <h2>Sua mensagem aparecerá aqui!</h2>
+                <span>Digite um texto que deseja criptografar ou descriptografar.</span>
+            </div>       
         </div>
-        
-        <div class="botoes">
-            <button class="btn-encriptar">Criptografar</button>
-            <button class="btn-desencriptar">Descriptografar</button>
+
+        <div class="buttons">
+            <div class="container-btn">
+                <button class="btn-criptografar" onclick="criptografar()">Criptografar</button>
+                <button class="btn-descriptografar" onclick="descriptografar()">Descriptografar</button>
+            </div>
         </div>
-        
-        <section>
-            <textarea class="Mensagem" cols="20" rows="10"></textarea> 
-            <button class="btn-Copiar">Copiar</button>
-        </section>
     </main>
+
+    <footer class="rodape">
+        <div class="icons">
+            <a href="https://www.github.com"><ion-icon name="logo-github"></ion-icon></a> 
+        </div>
+        <h3>Desenvolvido por Francisco Gério</h3>
+    </footer>
     
+    <script src="script.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </body>
 </html>
